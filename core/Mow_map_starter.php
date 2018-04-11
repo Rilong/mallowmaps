@@ -11,6 +11,7 @@ class Mow_map_starter {
     public function start() {
         register_activation_hook(MOW_MAIN_FILE, array($this, 'activation'));
         register_deactivation_hook(MOW_MAIN_FILE, array($this, 'deactivation'));
+        new Mow_admin();
     }
 
     public function activation() {
