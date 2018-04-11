@@ -1,11 +1,12 @@
 <?php
+
+
     if(!defined('WP_UNINSTALL_PLUGIN'))
         exit();
 
-    if (!defined('MOW_MAP_PATH'))
-        define('MOW_MAP_PATH', plugin_dir_path(__FILE__));
+    require plugin_dir_path(__FILE__) . '/run.php';
 
-    require  MOW_MAP_PATH . '/core/map.php';
+    use core\Mow_map_starter;
 
-    $map = new Mow_map();
-    $map->getTableName();
+    $map = new Mow_map_starter();
+    $map->removeTable();

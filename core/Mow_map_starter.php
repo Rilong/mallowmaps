@@ -1,12 +1,12 @@
 <?php
 
-class Mow_map {
+namespace core;
+
+require_once 'Mow_assets.php';
+
+class Mow_map_starter {
 
     const TABLE_DB = 'mallowmaps';
-
-    public function __construct() {
-
-    }
 
     public function start() {
         register_activation_hook(MOW_MAIN_FILE, array($this, 'activation'));

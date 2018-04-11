@@ -8,10 +8,13 @@
     Author URI:
      */
 
-    define('MOW_MAP_PATH', plugin_dir_path(__FILE__));
+    require plugin_dir_path(__FILE__) . '/run.php';
+
+    use core\Mow_map_starter;
+    use core\Mow_assets;
+
     define('MOW_MAIN_FILE', __FILE__);
 
-    require  MOW_MAP_PATH . '/core/map.php';
-
-    $map = new Mow_map();
+    $map = new Mow_map_starter();
+    $assets = new Mow_assets();
     $map->start();
