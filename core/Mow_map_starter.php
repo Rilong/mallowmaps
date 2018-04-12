@@ -26,7 +26,7 @@ class Mow_map_starter {
         global $wpdb;
 
         $table_name = $this->getTableName();
-        $sql = "CREATE TABLE `{$table_name}` ( `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT , `lat` FLOAT NOT NULL , `lng` FLOAT NOT NULL , `marker` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , `offset` FLOAT NULL , `content` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+        $sql = "CREATE TABLE IF NOT EXISTS `{$table_name}` ( `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT , `lat` FLOAT NOT NULL , `lng` FLOAT NOT NULL , `marker` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL , `offset` FLOAT NULL , `content` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
         $wpdb->query($sql);
     }
 
