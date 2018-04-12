@@ -16,6 +16,7 @@ class Mow_map_starter {
 
     public function activation() {
         $this->createTable();
+        add_option(Mow_admin::OPT_NAME, array());
     }
 
     public function deactivation() {

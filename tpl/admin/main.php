@@ -1,1 +1,8 @@
-<h1><b><?=$title ?>, hello</b></h1>
+<div class="wrap">
+    <div class="mow-header">
+        <h1 class="mow-title"><?=$title?></h1>
+    </div>
+    <div class="mow-content">
+
+    </div>
+</div>
