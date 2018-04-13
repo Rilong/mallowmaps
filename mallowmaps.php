@@ -16,5 +16,6 @@
     define('MOW_MAIN_FILE', __FILE__);
 
     $map = new Mow_map_starter();
-    $assets = new Mow_assets();
     $map->start();
+    $assets = new Mow_assets();
+    $assets->frontStart();

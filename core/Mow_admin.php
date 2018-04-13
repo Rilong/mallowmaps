@@ -27,6 +27,8 @@ class Mow_admin {
 
     public function menu() {
         $this->opt_uri = add_menu_page(self::OPT_TITLE, self::OPT_TITLE, 'manage_options', self::OPT_SLUG, array($this, 'page'));
+        $assets = new Mow_assets();
+        $assets->adminStart($this->opt_uri);
     }
 
     public function page() {

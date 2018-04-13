@@ -11,8 +11,12 @@ namespace core;
 
 class Mow_assets {
 
-    public function __construct() {
+    public function frontStart() {
         add_action('wp_enqueue_scripts', array($this, 'front'));
+    }
+
+    public function adminStart($uri) {
+        add_action("admin_print_scripts-$uri", array($this, 'admin'));
     }
 
     public function front() {
@@ -38,7 +42,7 @@ class Mow_assets {
     }
 
     public static function adminCssAsset() {
-
+        wp_enqueue_style('mow_opt_panel', MOW_ASSET_URI . '/admin/css/mallowmaps-panel.css', array(), false);
     }
 
 }
