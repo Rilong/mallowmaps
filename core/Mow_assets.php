@@ -38,7 +38,7 @@ class Mow_assets {
     }
 
     public static function adminJsAsset() {
-
+        wp_enqueue_script('mow-mallowmaps-ajax', MOW_ASSET_URI . '/admin/js/ajax.js', 'jquery', false, true);
     }
 
     public static function adminCssAsset() {

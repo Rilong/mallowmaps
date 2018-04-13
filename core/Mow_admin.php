@@ -14,6 +14,7 @@ class Mow_admin {
     const OPT_NAME = 'mallowmaps';
     const OPT_TITLE = 'MallowMaps';
     const OPT_SLUG = 'mallowmaps';
+    const LINK_G_API = 'https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&reusekey=true&hl=ru';
 
     public $opt_uri;
     private $map_options;
@@ -38,7 +39,7 @@ class Mow_admin {
         $content = '';
 
         if (!isset($this->map_options['api_key'])) {
-            $content = $this->load_tpl('activation', array(), true);
+            $content = $this->load_tpl('activation', array('link' => self::LINK_G_API), true);
         }
 
         $this->load_tpl('main', compact('title', 'content'));

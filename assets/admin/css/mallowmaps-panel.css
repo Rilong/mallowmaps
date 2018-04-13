@@ -1,0 +1,87 @@
+.mow-flex {
+    display: flex;
+}
+
+.mow-row {
+    flex-direction: row;
+}
+
+.mow-column {
+    flex-direction: column;
+}
+
+.mow-info {
+    color: #afafaf;
+}
+
+.mow-activation {
+    height: 300px;
+}
+
+.mow-header {
+    min-height: 100px;
+    background-color: #5D5DC5;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.mow-header h1 {
+    color: inherit;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.mow-content {
+    background-color: #ffffff;
+    min-height: 300px;
+}
+
+.mow-activation {
+    justify-content: center;
+}
+
+.mow-activation input {
+    height: 50px;
+    box-shadow: none;
+    width: calc(85% - 20px);
+    margin-left: 20px;
+    margin-right: 0;
+    border-radius: 80px 0 0 80px;
+    border-right: none;
+    outline: none;
+    padding-left: 20px;
+
+}
+
+.mow-activation input:focus {
+    border-color: rgb(201, 201, 201);
+    box-shadow: none;
+}
+
+.mow-activation #mow-activate {
+    height: 50px;
+    border: none;
+    background-color: #5D5DC5;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 4px;
+    width: calc(15% - 20px);
+    border-radius: 0 80px 80px 0;
+    outline: none;
+    transition: background-color, .25s ease;
+    margin-top: 1px;
+}
+
+.mow-activation #mow-activate:active {
+    background-color: #6565d5;
+}
+
+.mow-info-activation {
+    padding: 0 40px;
+}
+
+.mow-info-activation p {
+    margin: 0;
+}
