@@ -16,8 +16,10 @@ class Mow_admin {
     const OPT_SLUG = 'mallowmaps';
 
     public $opt_uri;
+    private $map_options;
 
     public function __construct() {
+        $this->map_options = get_option(self::OPT_NAME);
         $this->hooks();
     }
 
@@ -33,8 +35,13 @@ class Mow_admin {
 
     public function page() {
         $title = self::OPT_TITLE;
+        $content = '';
 
-        $this->load_tpl('main', compact('title'));
+        if (!isset($this->map_options['api_key'])) {
+            $content = $this->load_tpl('activation', array(), true);
+        }
+
+        $this->load_tpl('main', compact('title', 'content'));
     }
 
     private function load_tpl($name, $data = array(), $return = false) {
