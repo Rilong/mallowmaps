@@ -19,3 +19,8 @@ var map = new google.maps.Map(document.getElementById('mow_admin_map'), {
     zoom: 4,
     center: {lat: -25.363, lng: 131.044}
 });
+
+var place = new google.maps.places.Autocomplete(
+    (document.getElementById('mowmap_places')), {
+        types: ['geocode']
+    });
