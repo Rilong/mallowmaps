@@ -40,6 +40,9 @@ class Mow_admin {
 
         if (!isset($this->map_options['api_key'])) {
             $content = $this->load_tpl('activation', array('link' => self::LINK_G_API), true);
+        }else {
+            $content = $this->load_tpl('home', array(), true);
+            $content .= $this->load_tpl('create-map', array(), true);
         }
 
         $this->load_tpl('main', compact('title', 'content'));

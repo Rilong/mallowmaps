@@ -85,3 +85,31 @@
 .mow-info-activation p {
     margin: 0;
 }
+
+.mowmap-btn-green {
+    height: 50px;
+    border: none;
+    background-color: #7ac56c;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 4px;
+    border-radius: 0;
+    outline: none;
+    transition: background-color, .25s ease;
+    margin-top: 1px;
+    padding: 10px 20px;
+}
+
+.mowmap-btn-green:active {
+    background-color: #87d977;
+}
+
+#mow-add-map {
+    float: right;
+}
+
+#mow_admin_map {
+    height: 400px;
+    width: 100%;
+}
