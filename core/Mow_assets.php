@@ -38,6 +38,8 @@ class Mow_assets {
     }
 
     public static function adminJsAsset() {
+        if ($key = Mow_map::getApiKey())
+            wp_enqueue_script('google-map-api', Mow_map::getMapUri($key), array(), false, true);
         wp_enqueue_script('mow-mallowmaps-ajax', MOW_ASSET_URI . '/admin/js/ajax.js', 'jquery', false, true);
     }
 

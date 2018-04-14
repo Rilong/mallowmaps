@@ -2,6 +2,7 @@
 
 define('MOW_MAP_PATH', plugin_dir_path(__FILE__));
 define('MOW_ASSET_URI', plugins_url('assets', __FILE__));
+define('MOW_MAP_URI', 'https://maps.googleapis.com/maps/api/js?key=%API_KEY%');
 
 spl_autoload_register('mow_autoloader');
 
