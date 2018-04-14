@@ -13,6 +13,7 @@ class Mow_map_starter {
         register_deactivation_hook(MOW_MAIN_FILE, array($this, 'deactivation'));
         new Mow_admin();
         new Mow_ajax();
+        new Mow_shortcodes();
     }
 
     public function activation() {
