@@ -40,12 +40,14 @@ class Mow_assets {
     public static function adminJsAsset() {
         if ($key = Mow_map::getApiKey()) {
             wp_enqueue_script('google-map-api', Mow_map::getMapUri($key), array(), false, true);
+            wp_enqueue_script('magnific-popup-js', MOW_ASSET_URI . '/admin/js/jquery.magnific-popup.min.js', array(), false, true);
             wp_enqueue_script('mow-admin-map', MOW_ASSET_URI . '/admin/js/map.js', array(), false, true);
         }
         wp_enqueue_script('mow-mallowmaps-ajax', MOW_ASSET_URI . '/admin/js/ajax.js', 'jquery', false, true);
     }
 
     public static function adminCssAsset() {
+        wp_enqueue_style('magnific-popup-css', MOW_ASSET_URI . '/admin/css/magnific-popup.css', array(), false);
         wp_enqueue_style('mow_opt_panel', MOW_ASSET_URI . '/admin/css/mallowmaps-panel.css', array(), false);
     }
 
