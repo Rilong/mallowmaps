@@ -66,4 +66,8 @@ class Mow_admin {
         return $content;
     }
 
+    private function getOptions() {
+        return $this->map_options;
+    }
+
 }

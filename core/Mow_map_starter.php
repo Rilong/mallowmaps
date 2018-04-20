@@ -19,7 +19,10 @@ class Mow_map_starter {
 
     public function activation() {
         $this->createTableMap();
-        add_option(Mow_admin::OPT_NAME, array());
+        $this->createTableMakers();
+        
+        if (!get_option(Mow_admin::OPT_NAME))
+            add_option(Mow_admin::OPT_NAME, array());
     }
 
     public function deactivation() {
@@ -34,10 +37,26 @@ class Mow_map_starter {
         $wpdb->query($sql);
     }
 
+    public function createTableMakers() {
+        global $wpdb;
+
+        $table_name = $this->getTableName(self::TABLE_MAKERS_DB);
+        $sql = "CREATE TABLE IF NOT EXISTS `{$table_name}` ( `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT , `name` VARCHAR(120) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `map_id` INT(11) NOT NULL , `lat` FLOAT NOT NULL , `lng` FLOAT NOT NULL , `offset` FLOAT NOT NULL , `content` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL , PRIMARY KEY (`id`), UNIQUE (`name`)) ENGINE = InnoDB;";
+        $wpdb->query($sql);
+    }
+
     public function removeTableMap() {
         global $wpdb;
 
         $table_name = $this->getTableName(self::TABLE_MAPS_DB);
+        $sql = "DROP TABLE `{$table_name}`";
+        $wpdb->query($sql);
+    }
+
+    public function removeTableMakers() {
+        global $wpdb;
+
+        $table_name = $this->getTableName(self::TABLE_MAKERS_DB);
         $sql = "DROP TABLE `{$table_name}`";
         $wpdb->query($sql);
     }
