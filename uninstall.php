@@ -10,5 +10,5 @@
     use core\Mow_admin;
 
     $map = new Mow_map_starter();
-    $map->removeTable();
+    $map->removeTableMap();
     delete_option(Mow_admin::OPT_NAME);
