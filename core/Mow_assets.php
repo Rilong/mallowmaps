@@ -48,6 +48,7 @@ class Mow_assets {
 
     public static function adminCssAsset() {
         wp_enqueue_style('magnific-popup-css', MOW_ASSET_URI . '/admin/css/magnific-popup.css', array(), false);
+        wp_enqueue_style('magnific-theme-css', MOW_ASSET_URI . '/admin/css/standard-theme.css', array(), false);
         wp_enqueue_style('mow_opt_panel', MOW_ASSET_URI . '/admin/css/mallowmaps-panel.css', array(), false);
     }
 

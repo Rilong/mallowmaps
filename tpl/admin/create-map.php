@@ -11,6 +11,9 @@
             <tr>
                 <td><button id="mowmap_get_center">Get center</button></td>
             </tr>
+            <tr>
+                <td><button id="mowmap_maker_popup">Add maker</button></td>
+            </tr>
         </table>
     </div>
 </div>

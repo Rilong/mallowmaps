@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.mfp-close-btn-in .mfp-close {
+    color: #FFF;
+}
+
+button.mfp-close {
+    width: 50px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 35px;
+    background-color: #CC0000;
+    opacity: 1;
+    -webkit-transition: background-color .4s ease;
+    -o-transition: background-color .4s ease;
+    transition: background-color .4s ease;
+}
+
+button.mfp-close:hover {
+    background-color: #e60000;
+}
+
+button.mfp-close:active {
+    top: 0;
+}
+
+.mfp-close.icon::before {
+    content: '\f00d';
+    font-family: 'FontAwesome', sans-serif;
+}
+
+.base-popup {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 150px;
+    background-color: #FFF;
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Animation Fade */
+
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: opacity .7s ease;
+    -o-transition: opacity .7s ease;
+    transition: opacity .7s ease;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+    top: -40px;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+    top: 0;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+    top: -40px;
+}
+
+/* Animation Scale */
+
+.mfp-scale.mfp-bg {
+    opacity: 0;
+    -webkit-transition: opacity .8s ease;
+    -o-transition: opacity .8s ease;
+    transition: opacity .8s ease;
+}
+
+.mfp-scale.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+.mfp-scale.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+.mfp-scale.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+
+}
+
+.mfp-scale.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.mfp-scale.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+
+}
