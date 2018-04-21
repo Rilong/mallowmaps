@@ -125,3 +125,21 @@
 .p100 {
     width: 100%;
 }
+
+/* Popup */
+
+.mfp-bg {
+    z-index: 999999;
+}
+
+.mfp-wrap {
+    z-index: 9999999;
+}
+
+.mfp-content {
+    z-index: 9999999;
+}
+
+.base-popup.makers {
+    max-width: 800px;
+}

@@ -59,7 +59,22 @@ jQuery(function ($) {
         $('#mowmap_lat').val(mapData.coordinates.lat);
         $('#mowmap_lng').val(mapData.coordinates.lng);
 
-    })
+    });
+
+    $('#mowmap_maker_popup').on('click', function () {
+        $.magnificPopup.open({
+            items: {
+                src: '#makers-popup',
+                closeBtnInside:true,
+                type: 'inline'
+            },
+
+            closeMarkup: "<button title=\"Close (Esc)\" type=\"button\" class=\"mfp-close icon\"></button>",
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+
+        });
+    });
 
 });
 

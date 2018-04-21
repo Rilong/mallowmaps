@@ -15,5 +15,9 @@
                 <td><button id="mowmap_maker_popup">Add maker</button></td>
             </tr>
         </table>
+
+        <div id="makers-popup" class="base-popup makers mfp-hide">
+            Popup content
+        </div>
     </div>
 </div>
